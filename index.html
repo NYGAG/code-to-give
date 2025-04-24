@@ -1,77 +1,71 @@
 import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   return (
-    <div className="font-sans bg-black text-white">
-      {/* Header */}
-      <header className="bg-purple-900 text-white p-4 flex justify-between items-center">
-        <div className="text-2xl font-bold">chameleon</div>
-        <nav className="space-x-4">
-          <a href="#home" className="hover:underline">Home</a>
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#camps" className="hover:underline">Camps</a>
-        </nav>
-      </header>
-
+    <div className="bg-black text-white min-h-screen font-sans">
       {/* Hero Section */}
-      <section id="home" className="bg-purple-800 text-center py-20 px-4">
-        <h1 className="text-5xl font-extrabold mb-4">A Breath of Fresh Air</h1>
-        <p className="text-xl text-purple-200 mb-6">Innovative camps with hands-on learning</p>
-        <p className="mb-6">EST. 2024 | Sammamish, WA</p>
-        <button className="bg-white text-purple-900 px-6 py-2 rounded-full font-bold hover:bg-gray-200">Donate now!</button>
+      <section className="bg-gradient-to-br from-purple-800 to-black p-10 text-center">
+        <h1 className="text-5xl font-bold mb-4">Code to Give</h1>
+        <p className="text-xl max-w-xl mx-auto">
+          Empowering local small businesses with websites and tech solutions.
+        </p>
+        <Button className="mt-6 bg-purple-600 text-white hover:bg-purple-700">
+          Get in Touch
+        </Button>
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-purple-700 text-white py-16 px-8 grid md:grid-cols-3 gap-8 text-center">
-        <div>
-          <h2 className="text-2xl font-bold mb-2">Our Story</h2>
-          <p>In a world flooded with endless entertainment, internet and social media, we realized that there was a lack of genuine experiences in our community. At Chameleon, we create engaging projects and lessons that are designed to bring youth into the moment and spark ideas and wonder!</p>
-        </div>
-        <div className="italic">"Try to leave the Earth a better place than when you arrived." - Sidney Sheldon</div>
-        <div>
-          <h2 className="text-2xl font-bold mb-2">Our Goal</h2>
-          <p>We believe that everyone needs to have a real connection to their environment, and deserve to be taught that in an engaging, unique way, different from your average coding class.</p>
+      <section className="p-10 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4 text-purple-400">Our Mission</h2>
+        <p className="text-lg">
+          Code to Give was created to help local small businesses thrive in a digital world.
+          From building custom websites to solving tech problems, we’re here to support and uplift our community.
+        </p>
+      </section>
+
+      {/* Services Section */}
+      <section className="p-10 bg-purple-950 text-white">
+        <h2 className="text-3xl font-bold mb-6 text-center text-purple-300">What We Offer</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card className="bg-purple-800 border-0">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-2">Custom Websites</h3>
+              <p>We design modern, responsive websites tailored to your business needs.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-purple-800 border-0">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-2">Tech Support</h3>
+              <p>Help with email, domains, software setup, and more — no tech skill needed.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-purple-800 border-0">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-2">One-on-One Help</h3>
+              <p>We meet with you personally to understand your goals and help you grow.</p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* Future Projects Section */}
-      <section id="camps" className="bg-purple-600 py-16 px-8 text-center">
-        <h2 className="text-4xl font-bold mb-4">The secrets of nature<br />Are hidden in plain sight</h2>
-        <p className="mb-2">Future Projects - 2025</p>
-        <p className="mb-6 text-sm">click to learn more — view info below!</p>
-        <div className="flex flex-col items-center gap-4 mb-8">
-          <button className="bg-purple-900 text-white px-4 py-2 rounded w-40">Project Water</button>
-          <button className="bg-purple-900 text-white px-4 py-2 rounded w-40">Clean Energies</button>
-          <button className="bg-purple-900 text-white px-4 py-2 rounded w-40">Eco-Tech</button>
-        </div>
-        <div className="max-w-3xl mx-auto text-left text-sm">
-          <h3 className="text-xl font-semibold mb-2">Water</h3>
-          <p>
-            In our Water Project, students will begin learning about the water cycle and fundamental concepts that affect how water interacts with the environment around it. As students dive into the project, they will be presented with a diorama featuring a prominent water feature (river, lake, waterfall) and objects such as mountains, villages, and forests. The problem students will aim to solve will be to prevent the village from being destroyed from the prominent water feature. Concepts regarding engineering and environmental science will be implemented to protect the village. Midweek, students will embark on a community service project, where they will clean up a nearby creek or stream. Finally, real-life examples of the dioramas will be introduced, and case studies will be conducted to make strong connections with the real world.
-          </p>
-        </div>
+      {/* Contact Section */}
+      <section className="p-10 max-w-3xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4 text-purple-400">Let's Work Together</h2>
+        <p className="mb-6">
+          Interested in getting help for your business? We’d love to hear from you.
+          Send us an email at <a className="text-purple-300 underline" href="mailto:codetogive@gmail.com">codetogive@gmail.com</a>
+        </p>
+        <Button className="bg-purple-600 hover:bg-purple-700 text-white">
+          Contact Us
+        </Button>
       </section>
 
       {/* Footer */}
-      <footer className="bg-purple-900 text-white py-8 px-4 text-sm">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div>
-            <p>Reach us at <a href="mailto:camps.chameleon@gmail.com" className="underline">camps.chameleon@gmail.com</a></p>
-            <p>Call or Text at <span className="underline">425.738.2825</span></p>
-          </div>
-          <div>
-            <p className="font-bold">LINKS</p>
-            <p>Facebook</p>
-            <p>Instagram</p>
-          </div>
-          <div>
-            <p className="font-bold">CHAMELEON</p>
-            <p className="text-xs">acknowledges that we are on the Indigenous Land of Coast Salish peoples who have reserved treaty rights to this land, specifically the Snoqualmie Indian Tribe.</p>
-          </div>
-        </div>
-        <div className="text-center mt-4">chameleon 2024</div>
+      <footer className="bg-black text-center py-4 text-gray-400 text-sm">
+        © {new Date().getFullYear()} Code to Give. All rights reserved.
       </footer>
     </div>
   );
 }
-Replaced old homepage with new Code to Give site
